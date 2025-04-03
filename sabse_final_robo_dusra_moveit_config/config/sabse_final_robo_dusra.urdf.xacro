@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="sabse_final_robo_dusra">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import sabse_final_robo_dusra urdf file -->
+    <xacro:include filename="$(find sabse_final_robo_dusra_description)/urdf/sabse_final_robo_dusra.xacro" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="sabse_final_robo_dusra.ros2_control.xacro" />
+
+
+    <xacro:sabse_final_robo_dusra_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>
