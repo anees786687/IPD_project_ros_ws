@@ -7,19 +7,4 @@ moveit_setup_assistant_config:
   package_settings:
     author_name: Anees Alwani
     author_email: anisameen123@gmail.com
-    generated_timestamp: 1743650368
-  control_xacro:
-    command:
-      - position
-    state:
-      - position
-      - velocity
-  modified_urdf:
-    xacros:
-      - control_xacro
-  control_xacro:
-    command:
-      - position
-    state:
-      - position
-      - velocity
+    generated_timestamp: 1743705662

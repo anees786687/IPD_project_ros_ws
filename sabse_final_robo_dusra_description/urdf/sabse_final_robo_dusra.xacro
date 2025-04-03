@@ -5,12 +5,12 @@
 <xacro:include filename="$(find sabse_final_robo_dusra_description)/urdf/sabse_final_robo_dusra.trans" />
 <xacro:include filename="$(find sabse_final_robo_dusra_description)/urdf/sabse_final_robo_dusra.gazebo" />
 
-<!-- Include ros2_control support -->
+<!-- Include ros2_control support
 <xacro:arg name="use_ros2_control" default="false"/>
 <xacro:if value="$(arg use_ros2_control)">
-  <xacro:include filename="$(find sabse_final_robo_dusra_control)/config/sabse_final_robo_dusra_ros2_control.xacro" />
+  <xacro:include filename="$(find sabse_final_robo_dusra_moveit_config)/config/sabse_final_robo_dusra.ros2_control.xacro" />
   <xacro:sabse_final_robo_dusra_ros2_control name="sabse_final_robo_dusra" prefix=""/>
-</xacro:if>
+</xacro:if> -->
 
 <link name="base_link">
   <inertial>
