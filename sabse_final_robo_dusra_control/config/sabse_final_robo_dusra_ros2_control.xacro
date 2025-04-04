@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="sabse_final_robo_dusra_ros2_control" params="name prefix">
+    <ros2_control name="${name}" type="system">
+      <hardware>
+        <plugin>mock_components/GenericSystem</plugin>
+      </hardware>
+      
+      <!-- Base rotation joint -->
+      <joint name="${prefix}base_rotation_joint">
+        <command_interface name="position">
+          <param name="min">-1.57</param>
+          <param name="max">1.57</param>
+        </command_interface>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+      
+      <!-- Shoulder joint -->
+      <joint name="${prefix}shoulder_joint">
+        <command_interface name="position">
+          <param name="min">-1.57</param>
+          <param name="max">1.57</param>
+        </command_interface>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+      
+      <!-- Wrist joint -->
+      <joint name="${prefix}wrist_joint">
+        <command_interface name="position">
+          <param name="min">-0.8</param>
+          <param name="max">0.8</param>
+        </command_interface>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+      
+      <!-- Forearm joint -->
+      <joint name="${prefix}forearm_joint">
+        <command_interface name="position">
+          <param name="min">-1.231</param>
+          <param name="max">1.231</param>
+        </command_interface>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+      
+      <!-- Elbow joint -->
+      <joint name="${prefix}elbow_joint">
+        <command_interface name="position">
+          <param name="min">-0.840</param>
+          <param name="max">0.840</param>
+        </command_interface>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+      
+      <!-- Gripper joint -->
+      <joint name="${prefix}gripper_joint">
+        <command_interface name="position">
+          <param name="min">-0.6</param>
+          <param name="max">0.6</param>
+        </command_interface>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+    </ros2_control>
+  </xacro:macro>
+
+</robot>

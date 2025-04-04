@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: sabse_final_robo_dusra_description
+    relative_path: urdf/sabse_final_robo_dusra.xacro
+  srdf:
+    relative_path: config/sabse_final_robo_dusra.srdf
+  package_settings:
+    author_name: Anees Alwani
+    author_email: anisameen123@gmail.com
+    generated_timestamp: 1743705662

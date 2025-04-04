@@ -1,0 +1,476 @@
+<?xml version="1.0" ?>
+<robot name="sabse_final_robo_dusra" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find sabse_final_robo_dusra_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find sabse_final_robo_dusra_description)/urdf/sabse_final_robo_dusra.trans" />
+<xacro:include filename="$(find sabse_final_robo_dusra_description)/urdf/sabse_final_robo_dusra.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.039783283707411174 0.05583848628080968 0.09366101567392131" rpy="0 0 0"/>
+    <mass value="0.912778498430855"/>
+    <inertia ixx="0.001555" iyy="0.002663" izz="0.001642" ixy="1e-06" iyz="-6e-06" ixz="1.4e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Pinza1_1">
+  <inertial>
+    <origin xyz="0.0041534278796213076 0.006440573334387356 0.029187575398014504" rpy="0 0 0"/>
+    <mass value="0.05715084388035935"/>
+    <inertia ixx="1.9e-05" iyy="1.8e-05" izz="5e-06" ixy="-1e-06" iyz="-5e-06" ixz="-3e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.067173 -0.388365 -0.072519" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Pinza1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.067173 -0.388365 -0.072519" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Pinza1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Pinza2_1">
+  <inertial>
+    <origin xyz="-0.00305811056045599 0.007153515163413782 0.02900869072363836" rpy="0 0 0"/>
+    <mass value="0.0574367398539114"/>
+    <inertia ixx="2e-05" iyy="1.7e-05" izz="5e-06" ixy="1e-06" iyz="-6e-06" ixz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.154514 -0.378683 -0.072372" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Pinza2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.154514 -0.378683 -0.072372" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Pinza2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Engranaje1_1">
+  <inertial>
+    <origin xyz="-0.01112874902200403 0.0032587172699013456 0.0004920282025584338" rpy="0 0 0"/>
+    <mass value="0.03206774948119643"/>
+    <inertia ixx="1e-06" iyy="7e-06" izz="6e-06" ixy="0.0" iyz="-0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.100337 -0.380167 -0.066515" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Engranaje1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.100337 -0.380167 -0.066515" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Engranaje1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Engranaje2_1">
+  <inertial>
+    <origin xyz="0.013089157648934147 0.0007571228994763257 0.0006874712107331343" rpy="0 0 0"/>
+    <mass value="0.02733538421745774"/>
+    <inertia ixx="1e-06" iyy="6e-06" izz="5e-06" ixy="1e-06" iyz="0.0" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.120312 -0.378003 -0.066628" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Engranaje2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.120312 -0.378003 -0.066628" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Engranaje2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Base_de_la_garra_1">
+  <inertial>
+    <origin xyz="0.002785228701749534 0.0077137898935638605 0.020358586259639454" rpy="0 0 0"/>
+    <mass value="0.15628020369016074"/>
+    <inertia ixx="8.1e-05" iyy="8.1e-05" izz="3.2e-05" ixy="-6e-06" iyz="-2.1e-05" ixz="-1.7e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.101797 -0.363447 -0.031829" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Base_de_la_garra_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.101797 -0.363447 -0.031829" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Base_de_la_garra_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+
+
+<!-- USE BARRA ONLY WHEN YOU ARE IMPLEMENTING THE HARDWARE, FOR SIMULATION JUST JUST PINZA WITH ENGRANAJE -->
+<!-- <link name="Barra2_1">
+  <inertial>
+    <origin xyz="-0.06131858038900767 -0.0927871373650227 0.2727526467026259" rpy="0 0 0"/>
+    <mass value="0.02049818532475354"/>
+    <inertia ixx="1e-06" iyy="3e-06" izz="3e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.193779 -0.475012 0.18372" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Barra2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.193779 -0.475012 0.18372" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Barra2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Barra1_1">
+  <inertial>
+    <origin xyz="-0.105030366165601 -0.09402824711908714 0.260994223183704" rpy="0 0 0"/>
+    <mass value="0.020498186106830463"/>
+    <inertia ixx="1e-06" iyy="3e-06" izz="3e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.194216 -0.481046 0.171865" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Barra1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.194216 -0.481046 0.171865" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Barra1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link> -->
+
+<link name="Muneca_1">
+  <inertial>
+    <origin xyz="-0.0032558072855517345 0.02176378321714928 -0.0021491165878402413" rpy="0 0 0"/>
+    <mass value="0.1688382109185934"/>
+    <inertia ixx="5.8e-05" iyy="3.1e-05" izz="4.4e-05" ixy="1e-06" iyz="1e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.112462 -0.329818 -0.035468" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Muneca_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.112462 -0.329818 -0.035468" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Muneca_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Seguro_de_servomotor_1">
+  <inertial>
+    <origin xyz="0.001284694177888429 -0.0034059088939957793 -0.0012912911092722787" rpy="0 0 0"/>
+    <mass value="0.004322628377632507"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.100474 -0.322303 -0.047563" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Seguro_de_servomotor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.100474 -0.322303 -0.047563" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Seguro_de_servomotor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Eje_Central_1">
+  <inertial>
+    <origin xyz="0.006159545272237638 0.03082152507523024 0.0044873701217724715" rpy="0 0 0"/>
+    <mass value="0.7834341261446325"/>
+    <inertia ixx="0.000985" iyy="0.000633" izz="0.001" ixy="3e-06" iyz="-0.000135" ixz="8.4e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.040779 -0.093108 -0.09288" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Eje_Central_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.040779 -0.093108 -0.09288" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Eje_Central_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Tapa_Eje_1">
+  <inertial>
+    <origin xyz="-0.003454760797893891 0.007073481483932859 0.053702667511806794" rpy="0 0 0"/>
+    <mass value="0.04795235524040736"/>
+    <inertia ixx="3.2e-05" iyy="1.5e-05" izz="3.3e-05" ixy="9e-06" iyz="-6e-06" ixz="7e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.072046 -0.12896 -0.05286" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Tapa_Eje_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.072046 -0.12896 -0.05286" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Tapa_Eje_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Tapa_garra_1">
+  <inertial>
+    <origin xyz="-8.89695752282621e-05 -0.0020918341657099604 -0.008261929232570978" rpy="0 0 0"/>
+    <mass value="0.01964609230254284"/>
+    <inertia ixx="2e-06" iyy="4e-06" izz="2e-06" ixy="0.0" iyz="-1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.111463 -0.390255 -0.075692" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Tapa_garra_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.111463 -0.390255 -0.075692" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Tapa_garra_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Antebrazo__4__1">
+  <inertial>
+    <origin xyz="0.022815179638928658 0.04069961389989363 -0.03992332224284366" rpy="0 0 0"/>
+    <mass value="0.6612420873424198"/>
+    <inertia ixx="0.00143" iyy="0.001166" izz="0.001421" ixy="-0.000626" iyz="0.000627" ixz="0.000544"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.03098 -0.163384 -0.102765" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Antebrazo__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.03098 -0.163384 -0.102765" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Antebrazo__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Brazo_1">
+  <inertial>
+    <origin xyz="0.010912471621770586 0.0403740010561964 0.0012811625990998346" rpy="0 0 0"/>
+    <mass value="0.4123818105357045"/>
+    <inertia ixx="0.000454" iyy="9.3e-05" izz="0.000455" ixy="-2.9e-05" iyz="3.7e-05" ixz="1.3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.095327 -0.241127 -0.037839" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Brazo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.095327 -0.241127 -0.037839" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find sabse_final_robo_dusra_description)/meshes/Brazo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="world">
+  
+</link>
+
+
+<joint name="world_base" type="fixed">
+  <origin xyz="0.0 0.0 0.0" rpy="${pi/2} 0.0 0.0"/>
+  <parent link="world"/>
+  <child link="base_link"/>
+  <axis xyz="0.0 0.0 0.0"/>
+  <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
+</joint>
+<!-- MODIFIED SECTION: Changed fixed joints to revolute for fingers -->
+<joint name="finger1_joint" type="revolute">
+  <origin xyz="-0.033164 0.008198 0.006004" rpy="0 0 0"/>
+  <parent link="Engranaje1_1"/>
+  <child link="Pinza1_1"/>
+  <axis xyz="0.10267 0.928954 -0.355673"/>
+  <limit lower="-0.6" upper="0.6" effort="10" velocity="1.0"/>
+  <mimic joint="gripper_joint" multiplier="1" offset="0"/>
+</joint>
+
+<joint name="finger2_joint" type="revolute">
+  <origin xyz="0.034202 0.00068 0.005744" rpy="0 0 0"/>
+  <parent link="Engranaje2_1"/>
+  <child link="Pinza2_1"/>
+  <axis xyz="-0.10267 -0.928954 0.355673"/>
+  <limit lower="-0.6" upper="0.6" effort="10" velocity="1.0"/>
+  <mimic joint="gripper_joint" multiplier="1" offset="0"/>
+</joint>
+
+<!-- Main actuator joint for the first gear -->
+<joint name="gripper_joint" type="revolute">
+  <origin xyz="-0.00146 0.01672 0.034686" rpy="0 0 0"/>
+  <parent link="Base_de_la_garra_1"/>
+  <child link="Engranaje1_1"/>
+  <axis xyz="-0.10267 -0.928954 0.355673"/>
+  <limit lower="-0.6" upper="0.6" effort="10" velocity="1.0"/>
+</joint>
+
+<!-- Second gear mimics the first gear but with negative multiplier (moves in opposite direction) -->
+<joint name="gear2_joint" type="revolute">
+  <origin xyz="0.018515 0.014556 0.034799" rpy="0 0 0"/>
+  <parent link="Base_de_la_garra_1"/>
+  <child link="Engranaje2_1"/>
+  <axis xyz="0.10267 0.928954 -0.355673"/>
+  <limit lower="-0.6" upper="0.6" effort="10" velocity="1.0"/>
+  <mimic joint="gripper_joint" multiplier="1" offset="0"/>
+</joint>
+
+<joint name="wrist_joint" type="revolute">
+  <origin xyz="-0.010665 0.033629 -0.003639" rpy="0 0 0"/>
+  <parent link="Muneca_1"/>
+  <child link="Base_de_la_garra_1"/>
+  <axis xyz="-0.994335 0.105728 -0.010887"/>
+  <limit lower="0" upper="0" effort="10" velocity="1.0"/>
+</joint>
+
+<!-- MODIFIED: Add connection between bars and base -->
+<!-- First add connections for bar2 (one end to pinza2, one end to base) -->
+<!-- <joint name="bar2_finger_joint" type="revolute">
+  <origin xyz="0.039265 0.096329 -0.256092" rpy="0 0 0"/>
+  <parent link="Pinza2_1"/>
+  <child link="Barra2_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit lower="-1.57" upper="1.57" effort="5" velocity="0.1"/>
+  <mimic joint="gripper_joint" multiplier="-1" offset="0"/>
+</joint> -->
+
+<!-- Similar for bar1 -->
+<!-- <joint name="bar1_finger_joint" type="revolute">
+  <origin xyz="0.127043 0.092681 -0.244384" rpy="0 0 0"/>
+  <parent link="Pinza1_1"/>
+  <child link="Barra1_1"/>
+  <axis xyz="-0.10267 -0.928954 0.355673"/>
+  <limit lower="-1.57" upper="1.57" effort="5" velocity="0.1"/>
+  <mimic joint="gripper_joint" multiplier="1" offset="0"/>
+</joint> -->
+
+<!-- Add virtual connection points for the bars to the base -->
+<!-- These are needed to complete the four-bar linkage mechanisms -->
+<!-- <joint name="bar1_base_virtual" type="revolute">
+  <origin xyz="-0.092419 -0.117599 -0.039863" rpy="0 0 0"/>
+  <parent link="Base_de_la_garra_1"/>
+  <child link="Barra1_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit lower="-1.57" upper="1.57" effort="5" velocity="0.1"/>
+  <mimic joint="gripper_joint" multiplier="0.5" offset="0"/>
+</joint>
+
+<joint name="bar2_base_virtual" type="revolute">
+  <origin xyz="-0.091982 -0.111565 -0.040543" rpy="0 0 0"/>
+  <parent link="Base_de_la_garra_1"/>
+  <child link="Barra2_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit lower="-1.57" upper="1.57" effort="5" velocity="0.1"/>
+  <mimic joint="gripper_joint" multiplier="-0.5" offset="0"/>
+</joint> -->
+
+<joint name="elbow_joint" type="revolute">
+  <origin xyz="0.017135 0.088691 -0.002371" rpy="0 0 0"/>
+  <parent link="Brazo_1"/>
+  <child link="Muneca_1"/>
+  <axis xyz="0.106285 0.988538 -0.107219"/>
+  <limit lower="-0.840" upper="-0.840" effort="10" velocity="1.0"/>
+  <initial_position></initial_position>
+</joint>
+
+<joint name="servo_mount_joint" type="fixed">
+  <origin xyz="0.005147 0.081176 0.009724" rpy="0 0 0"/>
+  <parent link="Brazo_1"/>
+  <child link="Seguro_de_servomotor_1"/>
+</joint>
+
+<joint name="base_rotation_joint" type="revolute">
+  <origin xyz="0.040779 0.093108 0.09288" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Eje_Central_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+  <limit lower="-3.14" upper="3.14" effort="10" velocity="1.0"/>
+</joint>
+
+<joint name="axle_cap_joint" type="fixed">
+  <origin xyz="0.031267 0.035852 -0.04002" rpy="0 0 0"/>
+  <parent link="Eje_Central_1"/>
+  <child link="Tapa_Eje_1"/>
+</joint>
+
+<joint name="gripper_cap_joint" type="fixed">
+  <origin xyz="0.009666 0.026808 0.043863" rpy="0 0 0"/>
+  <parent link="Base_de_la_garra_1"/>
+  <child link="Tapa_garra_1"/>
+</joint>
+
+<joint name="shoulder_joint" type="revolute">
+  <origin xyz="-0.009799 0.070276 0.009885" rpy="0 0 0"/>
+  <parent link="Eje_Central_1"/>
+  <child link="Antebrazo__4__1"/>
+  <axis xyz="0.710191 -0.0 0.704009"/>
+  <limit lower="1.57" upper="2.3" effort="10" velocity="1.0"/>
+</joint>
+
+<joint name="forearm_joint" type="fixed">
+  <origin xyz="0.064347 0.077743 -0.064926" rpy="0 0 0"/>
+  <parent link="Antebrazo__4__1"/>
+  <child link="Brazo_1"/>
+  <axis xyz="-0.710191 0.0 -0.704009"/>
+  <limit lower="-1.231" upper="0" effort="10" velocity="1.0"/>
+   <initial_position>-1.1</initial_position>
+</joint>
+
+</robot>
