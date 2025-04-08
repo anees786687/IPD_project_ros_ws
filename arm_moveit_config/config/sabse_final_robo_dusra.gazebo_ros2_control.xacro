@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:macro name="sabse_final_robo_dusra_gazebo_ros2_control" params="name initial_positions_file">
+        <xacro:property name="initial_positions" value="${load_yaml(initial_positions_file)['initial_positions']}"/>
+
+        <ros2_control name="${name}" type="system">
+            <hardware>
+                <!-- Use Gazebo hardware interface -->
+                <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+            </hardware>
+            <joint name="base_rotation_joint">
+                <command_interface name="position">
+                  <param name="min">-1.57</param>
+                  <param name="max">1.57</param>
+                </command_interface>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['base_rotation_joint']}</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+            <joint name="shoulder_joint">
+                <command_interface name="position">
+                  <param name="min">-1.57</param>
+                  <param name="max">1.57</param>
+                </command_interface>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['shoulder_joint']}</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+            <joint name="forearm_joint">
+                <command_interface name="position">
+                  <param name="min">-1.231</param>
+                  <param name="max">1.231</param>
+                </command_interface>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['forearm_joint']}</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+            <joint name="elbow_joint">
+                <command_interface name="position">
+                  <param name="min">-0.840</param>
+                  <param name="max">0.840</param>
+                </command_interface>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['elbow_joint']}</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+            <joint name="wrist_joint">
+                <command_interface name="position">
+                  <param name="min">-0.8</param>
+                  <param name="max">0.8</param>
+                </command_interface>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['wrist_joint']}</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+            <joint name="gripper_joint">
+                <command_interface name="position">
+                  <param name="min">-0.6</param>
+                  <param name="max">0.6</param>
+                </command_interface>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['gripper_joint']}</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+        </ros2_control>
+    </xacro:macro>
+</robot>

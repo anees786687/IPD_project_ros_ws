@@ -460,7 +460,6 @@
   <child link="Muneca_1"/>
   <axis xyz="0.106285 0.988538 -0.107219"/>
   <limit lower="-0.840" upper="0.840" effort="10" velocity="1.0"/>
-  <initial_position></initial_position>
 </joint>
 
 
@@ -486,7 +485,6 @@
   <child link="Brazo_1"/>
   <axis xyz="-0.710191 0.0 -0.704009"/>
   <limit lower="-1.231" upper="1.231" effort="10" velocity="1.0"/>
-   <initial_position>-1.1</initial_position>
 </joint>
 
 </robot>

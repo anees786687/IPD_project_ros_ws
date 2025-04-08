@@ -1,0 +1,12 @@
+# Gazebo-specific controller settings
+gazebo_ros2_control:
+  update_rate: 100
+
+# PID gains for position controllers
+gazebo_ros2_control/pid_gains:
+  base_rotation_joint: {p: 100.0, i: 0.01, d: 10.0}
+  shoulder_joint: {p: 100.0, i: 0.01, d: 10.0}
+  forearm_joint: {p: 100.0, i: 0.01, d: 10.0}
+  elbow_joint: {p: 100.0, i: 0.01, d: 10.0}
+  wrist_joint: {p: 100.0, i: 0.01, d: 10.0}
+  gripper_joint: {p: 50.0, i: 0.01, d: 5.0}

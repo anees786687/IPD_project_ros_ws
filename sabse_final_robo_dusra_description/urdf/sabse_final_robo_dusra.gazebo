@@ -126,4 +126,35 @@
   <self_collide>true</self_collide>
 </gazebo>
 
+  <!-- Add damping to joints for more realistic motion -->
+  <gazebo reference="base_rotation_joint">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
+  
+  <gazebo reference="shoulder_joint">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
+  
+  <gazebo reference="forearm_joint">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
+  
+  <gazebo reference="elbow_joint">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
+  
+  <gazebo reference="wrist_joint">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
+  
+  <gazebo reference="gripper_joint">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
+  
 </robot>
